@@ -15,4 +15,4 @@ const locationSeatRowSchema = new mongoose.Schema({
     }
 })
 const LocationSeatRow = mongoose.model('LocationSeatRow', locationSeatRowSchema)
-module.exports = LockManagerocationSeatRow
+module.exports = LocationSeatRow

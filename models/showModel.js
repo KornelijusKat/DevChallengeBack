@@ -14,5 +14,5 @@ const showSchema = new mongoose.Schema({
         default: 0
     }
 })
-const Show = mongoose.Model('Show', showSchema)
+const Show = mongoose.model('Show', showSchema)
 module.exports = Show;

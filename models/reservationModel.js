@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const reservationSchema = mongoose.Schema({
+const reservationSchema = new mongoose.Schema({
     token:{
         type:String,
         required:[true]

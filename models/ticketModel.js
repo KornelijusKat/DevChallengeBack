@@ -7,7 +7,7 @@ const ticketSchema = new mongoose.Schema({
     },
     booking:{
         type:mongoose.Schema.Types.ObjectId,
-        required:[true]
+        ref:'Booking'
     },
     createdAt:{
         type:Date,

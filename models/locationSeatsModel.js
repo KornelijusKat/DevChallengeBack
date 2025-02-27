@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const locationSeats = new mongoose.Schema({
+const locationSeatsSchema = new mongoose.Schema({
     location:{
          type:mongoose.Schema.Types.ObjectId,
         ref:"LocationSeatRow"
@@ -15,6 +15,8 @@ const locationSeats = new mongoose.Schema({
     },
     ticketId:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:'Ticker'
+        ref:'Ticket'
     }
 })
+const LocationSeats = mongoose.model('LocationSeats', locationSeatsSchema)
+module.exports = LocationSeats
