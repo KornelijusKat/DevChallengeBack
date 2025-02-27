@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const codeRandomizer = require('../ApiTools/randomCodeGen')
+//randomizes code on creation
 const ticketSchema = new mongoose.Schema({
     code:{
         type:String,

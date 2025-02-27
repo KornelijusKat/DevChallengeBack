@@ -35,7 +35,13 @@ exports.cancelTicket = async(req, res) =>{
         }
         if(name === ticket.booking.name){
             const deleted = await Ticket.findByIdAndDelete(ticket._id)
+            return res.status(204).json({
+                status:'success'
+            })
         }
+        return res.status(404).json({
+            message:'didnt finish, woops'
+        })
     }catch(err){
         res.status(500).json({
             status:'failed',
