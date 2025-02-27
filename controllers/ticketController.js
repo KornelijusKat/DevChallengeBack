@@ -12,7 +12,6 @@ exports.getTicket = async(req,res) =>{
                 error:'unauthorized'
             })
         }
-        console.log(ticket.booking)
         res.status(200).json({
             tickets: ticket
         })

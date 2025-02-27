@@ -1,8 +1,10 @@
 const mongoose = require('mongoose')
-
+const codeRandomizer = require('../ApiTools/randomCodeGen')
 const ticketSchema = new mongoose.Schema({
     code:{
         type:String,
+        unique: true,
+        default: codeRandomizer,
         required:[true]
     },
     booking:{
